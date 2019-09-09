@@ -29,7 +29,7 @@ Host: <input id="video" type="checkbox" checked></input>
 </div>
 </div>
 
-    <!--style>
+    <style>
     .video__box{width:910px; margin:0 auto; overflow:hidden;}
     .video__main{ width:810px; height:607px;float:left }
     .video__list{ width:200px; height:607px; float:left;}
@@ -76,7 +76,7 @@ function join() {
   document.getElementById("join").disabled = true;
   document.getElementById("video").disabled = true;
   var channel_key = null;
-
+  //change the code value 96b7c496dca8492d87b241e8c5556de8 to your own app id
   console.log("Init AgoraRTC client with App ID: " + "96b7c496dca8492d87b241e8c5556de8");
   client = AgoraRTC.createClient({mode: 'live'});
   client.init("96b7c496dca8492d87b241e8c5556de8", function () {
