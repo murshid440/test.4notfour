@@ -1,35 +1,66 @@
 <!DOCTYPE html>
 <html>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<head>
+  <head>
+      <meta charset="UTF-8">
+      <title>Full Landing Page - Landing Zero</title>
+          <meta charset="utf-8">
+        <title>Landing Zero Free Bootstrap Theme with Video</title>
+        <meta name="description" content="This is a free Bootstrap landing page theme created for BootstrapZero. Feature video background and one page design." />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="generator" content="Codeply">
+        <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" /><link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="./style.css">
+
 <title>Simple One to One Video chat</title>
-<link rel="stylesheet" href="vendor/bootstrap.min.css">
 <script src="AgoraRTCSDK-2.9.0.js"></script>
 <script src="vendor/jquery.js"></script>
 </head>
-
 <!--Change here for the audio and video sources starts-->
 <body>
+  <!--top nav starts-->
+  <div style="visibility: hidden">
+  <nav id="topNav" class="navbar navbar-default navbar-fixed-top">
 <div id="div_device" class="panel panel-default">
-<div class="select">
+<div class="select" style="float:left;">
 <label for="audioSource">Audio source: </label><select id="audioSource"></select>
 </div>
-<div class="select">
+<div class="select" style="float:right;">
 <label for="videoSource">Video source: </label><select id="videoSource"></select>
+<div style="float:right;">
+Channel: <input id="channel" type="text" value="900" size="4"></input>
+Host: <input id="video" type="checkbox" checked></input>
 </div>
+</div>
+</div>
+</nav>
 </div>
 <!--ends-->
 
+<header id="first">
+    <div class="header-content">
+        <div class="inner">
+            <h1 class="cursive">Simple Video Calling</h1>
+            <h4>Powered by Agora.io</h4>
+            <hr>
+            <button id="join" data-toggle="collapse" class="btn btn-primary btn-xl" onclick="join()">Join</button> &nbsp;
+             <button id="leave" class="btn btn-primary btn-xl page-scroll" onclick="leave()">Leave</button>
+             <br>
+      
+<!--       
 <div id="div_join" class="panel panel-default">
 <div class="panel-body">
 Channel: <input id="channel" type="text" value="900" size="4"></input>
 Host: <input id="video" type="checkbox" checked></input>
-<button id="join" class="btn btn-primary" onclick="join()">Join</button>
-<button id="leave" class="btn btn-primary" onclick="leave()">Leave</button>
+-->
 <!--<button id="publish" class="btn btn-primary" onclick="publish()">Publish</button>
 <button id="unpublish" class="btn btn-primary" onclick="unpublish()">Unpublish</button> -->
 </div>
 </div>
+</div>
+</div>
+
+
 
     <!--style>
     .video__box{width:910px; margin:0 auto; overflow:hidden;}
@@ -219,9 +250,6 @@ function getDevices() {
     }
   });
 }
-
-//audioSelect.onchange = getDevices;
-//videoSelect.onchange = getDevices;
 getDevices();
 </script>
 </body>
